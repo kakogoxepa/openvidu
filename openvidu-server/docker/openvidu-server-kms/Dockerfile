@@ -6,7 +6,7 @@ RUN echo "deb [arch=amd64] http://ubuntu.openvidu.io/6.12.0 xenial kms6" | tee /
 	&& apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 5AFA7A83 \
 	&& apt-get update \
 	&& apt-get -y install wget curl kurento-media-server \
-	&& rm -rf /var/lib/apt/lists/*
+	&& rm -rf /var/lib/apt/lists/* \
 	&& wget -O /openvidu-server.jar https://github.com/OpenVidu/openvidu/releases/download/v2.11.0/openvidu-server-2.11.0.jar
 
 # Install Java, supervisor and netstat

@@ -19,9 +19,6 @@ RUN apt-get update && apt-get install -y \
 RUN mkdir -p /var/log/supervisor
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-# Copy OpenVidu Server
-COPY openvidu-server.jar openvidu-server.jar
-
 # Copy KMS entrypoint
 COPY kms.sh /kms.sh
 
